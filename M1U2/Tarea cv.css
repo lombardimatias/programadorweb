@@ -1,0 +1,53 @@
+h1{
+    color: red; /*comentario en css - color de la tipografia*/
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(43deg,#121010 0%, #789a78 130%);
+    text-align: center;
+    box-shadow: 16px -12px 22px 4px rgba(0,0,0,0.56);
+    border-radius: 48px 48px 48px 48px;
+-webkit-border-radius: 48px 48px 48px 48px;
+-moz-border-radius: 48px 48px 48px 48px;
+border: 8px double #660404;
+    
+}
+h2{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    background: linear-gradient(43deg,#121010 0%, #789a78 130%);
+    box-shadow: 16px -12px 22px 4px rgba(0,0,0,0.56);
+
+}
+h4{
+    color: red;
+    background: linear-gradient(43deg,#121010 0%, #789a78 130%);
+    text-align: center;
+    box-shadow: 16px -12px 22px 4px rgba(0,0,0,0.56);
+
+}
+.destacados{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: green; 
+    box-shadow: 16px -12px 22px 4px rgba(0,0,0,0.56);  
+    border-radius: 48px 48px 48px 48px;
+-webkit-border-radius: 48px 48px 48px 48px;
+-moz-border-radius: 48px 48px 48px 48px;
+border: 8px double #510606;
+}
+.destacados2{
+    color: purple;
+    font-weight: bolder;
+    font-size: 25px;
+}
+h3{
+    color: red;
+    background: linear-gradient(43deg,#121010 0%, #789a78 130%);
+    box-shadow: 16px -12px 22px 4px rgba(0,0,0,0.56);
+    text-align: center;
+    border-radius: 48px 48px 48px 48px;
+-webkit-border-radius: 48px 48px 48px 48px;
+-moz-border-radius: 48px 48px 48px 48px;
+border: 8px double #460505;
+}
