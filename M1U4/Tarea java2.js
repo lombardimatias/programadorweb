@@ -11,4 +11,3 @@ for(let i=0;i<miarreglo.length;i++){
 document.write (miarreglo);
 
 document.write(" el numero mayor de miarreglo: " +comparacion );
- 
