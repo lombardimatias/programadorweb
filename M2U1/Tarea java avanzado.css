@@ -1,0 +1,31 @@
+
+.cuadrados   div {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 20px;
+    height: 80;
+    width: 80px;
+    border: 4px white;
+
+}
+
+.b1{
+    background-color: red;
+}
+.b2{
+    background-color: green;
+}
+.b3{
+    background-color: blue;
+}
+
+textarea#mensaje{
+    height: 80px;
+    width: 150px;
+    position: relative;
+    left: 53px;
+
+}
