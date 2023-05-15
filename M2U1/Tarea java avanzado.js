@@ -19,6 +19,7 @@ function contadorcaracteres(){
     const contador=document.getElementById("constador");
     const caracter=mensaje.value.length;
     contador.textContent=caracter + "caracteres";
+    
 }
 
 const mensaje=document.getElementById("mensaje");
