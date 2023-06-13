@@ -1,6 +1,12 @@
 /*
 font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
 font-family: 'Open Sans', sans-serif;
+=======
+
+font-family: 'Open Sans', sans-serif;
+
+>>>>>>> e1062dc300c85cbc388f0451079ee3854177a243
 */
 footer {
     background-image: lightblue;
@@ -61,6 +67,7 @@ h1,h2 {
 .testimonio{
     text-align: center;
     padding: 50px 20px;
+<<<<<<< HEAD
 }
 .staff {
     background: #efefef;
@@ -75,3 +82,6 @@ h1,h2 {
 .scroll section {
     scroll-margin-top: 60px;
 }
+=======
+}
+>>>>>>> e1062dc300c85cbc388f0451079ee3854177a243
