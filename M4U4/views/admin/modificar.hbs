@@ -1,0 +1,45 @@
+<!-- Creamos la vista views/admin/modificar.hbs donde armaremos el formulario para
+modificar. Este es muy similar al de agregar, con la salvedad de que los valores de
+los campos vienen predefinidos por los campos de la novedad que trajimos de la
+base de datos.
+Además agregamos un campo oculto que utilizaremos en el envio del formulario
+para saber qué novedad debemos modificar-->
+
+
+<div class="container" style="margin: 100px auto">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Agregar una novedad</h4>
+            <form action="/admin/novedades/modificar" method="post">
+            <input type="hidden" value="{{novedad.id}}" name="id">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="titulo" value="{{novedad.titulo}}"
+                        name="titulo">
+
+                </div>
+
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="subtitulo" name="subtitulo">{{novedad.subtitulo}}
+
+</textarea>
+                </div>
+
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="cuerpo" name="cuerpo">{{novedad.cuerpo}}
+</textarea>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">modificar
+
+                </button>
+
+            </form>
+            {{#if error}}
+            <h5>{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+
+</div>

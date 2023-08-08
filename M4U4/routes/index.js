@@ -1,10 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var novedadesModel = require('../models/novedadesModel');
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function(req, res, next) {
+
+    var novedades= await novedadesModel.getNovedades()
+
+  res.render('index',{novedades});
 });
 
 router.post ('/', async(req,res,next) => {
@@ -15,7 +20,7 @@ router.post ('/', async(req,res,next) => {
   var apellido = req.body.apellido;
 
   var obj ={
-    to: 'lombardicompania@gmail.com',
+    to: 'daniel_duda93@gmail.com',
     subject: 'contacto web',
     html: nombre + " " + apellido +  " se contacto a través de la web y quiere mas información a este correo: " + email + ". <br> además, hizo este comentario : " + mensaje + ". <br> su tel es: "+ tel
   }
@@ -34,5 +39,6 @@ router.post ('/', async(req,res,next) => {
     message: 'mensaje enviado correctamente'
   });
 });
+
 
 module.exports = router;
