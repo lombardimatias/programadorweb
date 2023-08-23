@@ -1,0 +1,130 @@
+
+
+.modo {
+       height:1px;
+       margin-bottom: 45px;
+  }
+
+ 
+
+.dark{
+    background: black;
+}
+
+.dark h1{
+    color: white;
+}
+
+
+.dark #modo{
+    color: orange;
+}
+
+.dark p{
+    color: rgb(211, 211, 211);
+}
+.dark h2{
+   
+    color:rgb(151, 151, 151);
+}
+.dark h5{
+   
+   color:white;
+}
+
+
+
+.dark .testimonios{
+    background-color: black;
+    padding-bottom: 4rem !important;
+    border: 4px solid orange;
+}
+
+ .dark .lista-novedades li a:hover{
+    color: white;
+    background-color: black;
+}
+
+.dark .form-label{
+
+    color: white;
+
+}
+
+
+
+/*barra de navegacion*/
+
+.dark .navbar-brand::before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+            45deg,
+            black,red,black,red,
+            black,grey,red,black
+
+    );
+    background-size:200%;
+    animation:navbarAnimation 8s ease-in-out;
+    
+}
+
+/*menu tienda oficial*/
+.dropdown-menu a:hover{
+    background-color:black;
+    color:white;
+}
+
+/*cierra barra de navegacion*/
+
+
+
+
+
+/*footer*/
+ .dark .seccion-oscura{
+    background-color: black;
+   
+    color:white;
+
+}
+
+ .dark .iconos-redes-sociales a:hover{
+
+    background-color: white;
+    border:3px solid orange;
+}
+
+
+/*seccion equipo*/
+
+
+.dark .card-deck {
+    background-color: black;
+}
+
+.dark .card-text{
+    color:grey;
+}
+
+
+
+.dark .card-body{
+    background-color:whitesmoke;
+    color:black;
+}
+
+.dark .card-body:hover{
+background-color:black;
+color:white;
+}
+
+
+.dark .card-text:hover{
+    color:white;
+}

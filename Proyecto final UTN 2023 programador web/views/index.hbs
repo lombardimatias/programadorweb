@@ -1,0 +1,261 @@
+<!--contenedor principal-->
+<div class="container-fluid text-white">
+
+    <!--sección hero-->
+    <div id="home" class="row mt-5 align-items-center hero">
+
+        <div class="col-lg-3 offset-lg-2">
+
+            <h5>Homero´s Beer</h5>
+            <h2>La palabra cerveza, tiene la misma cantidad de letras que
+                <br>ALEGRIA!
+            </h2>
+            <br>
+            <p class="textInicio">Reinventando la Cerveza</p>
+
+
+
+        </div>
+
+
+    </div>
+    <!--cierre sección hero-->
+
+    <!--sección novedades/noticias-->
+    <div class="row my-3">
+        <br><br>
+        <div id="novedades" class="col-md-5 offset-md-2 py-3  scroll_section">
+            <h2>Noticias</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li> <a href="#" data-toggle="modal" data-target="#exampleModal{{id}}">
+                        <img src={{imagen}}>{{titulo}}</a></li>
+
+                {{/each}}
+            </ul>
+
+
+        </div>
+        <!--cierre sección novedades/noticias-->
+
+
+
+        <!-- Modal -->
+        {{#each novedades}}
+        <div class="modal fade bg-dark" id="exampleModal{{id}}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-white" id="exampleModalLabel">{{titulo}}</h1>
+                        <button type="button" class="btn-close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="text-white">{{subtitulo}}</h3>
+                        <img src="{{{imagen}}}">
+                        <p class="text-white">{{cuerpo}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <!--cierre modal-->
+
+
+    
+    <div class="col-md-4 my-3">
+        <div id="testimonios" class="rounded py-2 testimonios  scroll_section">
+            <h2 class="text-center">Comentarios</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {{#each testimonios}}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    {{/each}}
+                </ol>
+                <div class="carousel-inner">
+                    {{#each testimonios}}
+                    <div class="carousel-item {{#if @first}}active{{/if}}">
+                        <div class="testimonio">
+                            <h5 class="textTestimonio">{{comentario}}</h5>
+                            <p>{{usuario}} {{ubicacion}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+               
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div> <br>
+         <div class="text-center">
+                    <a href="/admin/testimonios/comentario" class="btn btn-lg btn-success">Comentar</a>
+                </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <!--seccion nuestra historia-->
+    <br>
+    <div id="historia" class="row align-items-center py-4  scroll_section">
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="images/cerveceria 1.jpg" alt="historia1" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none d-sm-block">
+            <img src="images/cerveceria 2.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+            <h2>Nuestra historia</h2>
+            <p class="parrafo-historia text-white"> Homero Bemberg llegó a la Argentina desde Alemania en 1852.
+
+Eligió la localidad de Quilmes debido a la calidad del agua y la cercanía con la estación de trenes, lo que la hacía un lugar propicio para fundar su cervecería. El 31 de octubre de 1890, luego de dos años de trabajo, inició a vender la cerveza Homero´s
+                s <b><i>"la mejor cerceza"</i></b>. <br>Con el tiempo, Homero´s traspasó los límites de la ciudad llegando a todo el país, logrando una producción a gran escala. Se inauguraron nuevas cervecerías en lugares como Rosario, Corrientes, Mendoza, Zárate, Tucumán y una maltería propia en Tres Arroyos. Sus publicidades a lo largo de los años la hicieron parte de la cultura popular de Argentina.<br><span style="font-size:small; color:orange;">La empresa rápidamente se convirtió en un clasico de los domingos en familia o reuniones de amigos. </span>
+                <br>
+
+
+            </p>
+        </div>
+
+    </div>
+    <!--cierre sección nuestra historia-->
+
+
+
+
+    <!--sección equipo-->
+    <br>
+    <h2>Equipo</h2>
+    <div id="Equipo" class="card-deck  scroll_section">
+
+        <div class="card">
+
+            <img class="card-img-top" src="images/nosotros01.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Sheila Duda</h4>
+                <br>
+                <h5 class="card-text">Diseñadora</h5>
+                <p class="card-text" align="justify"> Sheila es la encargada del marketing, haciendo llegar nuestro producto a buenos puertos.</p>
+            </div>
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="images/nosotros03.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Eric Duda</h4>
+                <br>
+                <h5 class="card-text">Ingeniero en sistemas</h5>
+                <p class="card-text" align="justify"> Eric, hermano de Sheila, encargado de la implementación de sistemas, organizando asi cada ámbito de la misma.
+                </p>
+            </div>
+
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="images/nosotros02.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Ariel Lombardi</h4>
+                <br>
+                <h5 class="card-text">Gerente general</h5>
+                <p class="card-text" align="justify">Encargado de las gestiónes de la empresa, procursor de Homero, manteniendo la tradicion de la empresa.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="images/nosotros04.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Matias Lombardi</h4>
+                <br>
+                <h5 class="card-text">Programador web</h5>
+                <p class="card-text" align="justify"> Encargado de las paginas Web, mente creativa y persona con iniciativa</p>
+            </div>
+
+        </div>
+    </div>
+    <!--cierre sección nosotros-->
+
+    <!--inicio mapa +formulario-->
+    <div id="conocenos" class="row py-4 scroll_section">
+        <div class="col-md-4 offset-md-2">
+            <h2>Visitanos</h2>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52465.93090297808!2d-58.30819115221036!3d-34.727352314725785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e699848e9a9%3A0x6fa6103e261d19f7!2sCerveceria%20Y%20Malteria%20Quilmes%20Saica%20Y%20G!5e0!3m2!1ses!2sar!4v1692631684649!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <!--cierre div con id visitanos-->
+
+        <!--formulario contacto-->
+        <div id="contacto" class="col-md-4 mt-4 mt-sm-0  scroll_section">
+            <h2>Contactanos</h2>
+            <form class="row g-3" action="/" method="post">
+                <div class="col-md-6">
+
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+
+                <div class="col-md-6">
+
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido">
+                </div>
+
+                <div class="col-12">
+
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+                </div>
+
+                <div class="col-12">
+
+                    <label for="tel" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+                </div>
+
+                <div class="col-12">
+
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" cols="30" rows="3" name="mensaje"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <br><br>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+
+
+
+            </form> <br>
+            <p align="center" class="mensaje">{{message}}</p> <!--le pasamos una propiedad -->
+        </div>
+    </div>
+    <!--cierre mapa +formulario-->
+
+
+
+
+
+
+
+
+</div>
+<!--cierre div contenedor-->
